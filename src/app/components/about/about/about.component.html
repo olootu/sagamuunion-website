@@ -1,0 +1,141 @@
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="cent">The Organisation</h1>
+
+  </div>
+  <div class="excos col-md-10">
+    <h3>Current Exco</h3>
+    <div fxLayout="row" fxLayout.lt-sm="row wrap" class="fle">
+      <div fxFlex.lt-sm="120px" class="child" *ngFor="let exec of executives">
+        <div>
+          <div class="exec" [ngClass]="{
+          'exec-image-small': xBreakPoint,
+          'exec-image': !xBreakPoint
+        }">
+            <img [src]="'../../../assets/' + exec.img + '.png'" [alt]="exec.name">
+          </div>
+          <div class="exec-details">
+            <p><span>{{exec.title}} </span><span>{{exec.name}}</span></p>
+            <p class="cent">{{exec.position}}</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="excos col-md-10">
+    <div class="row">
+      <div class="col-md-8">
+        <h3 class="sub-headings">Our story</h3>
+        <div>
+          <div>
+            <p>
+              Sagamu Union (GB) is an association of Sagamu indigenes residing in the UK.
+
+              Founded in 2000, our main objectives are to cater for the welfare of our members, to embark on different
+              projects that will uplift the standard of living of our people back home and also to promote our great
+              town, SAGAMU.
+
+            </p>
+            <p>
+
+              Our meetings are held on every 3rd Saturday of the month.</p>
+
+             <p><strong>Who can join?</strong></p>
+              <a href="http://www.sagamuunion.org/members" target="_blank" class="follow_btn">Membership</a>
+              is open to all Sagamu indigenes throughout the UK and Ireland.
+         
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="sub-headings">Reach us</h3>
+        <div class="constitution">
+          <p>
+            <mat-icon>home</mat-icon>
+            <span class="addr">562 Heathway, Dagenham, RM10 7RU</span>
+          </p>
+          <p>
+            <mat-icon>email</mat-icon>
+            <span class="addr">secretariat@sagamuunion.org</span>
+          </p>
+          <p>
+            <mat-icon>phone</mat-icon>
+            <span class="addr">07960 276681, 07931122554 </span>
+          </p>
+          <div class="constitution">
+            <a href="../../../../assets/constitution/const.pdf" target="_blank">
+              <mat-icon class="const-icon">cloud_download</mat-icon>
+              <button class="mat-but" color="primary" mat-raised-button>Download our constitution</button>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="excos trustee col-md-10">
+    <div class="row">
+      <div class="col-md-8 ">
+        <h3 class="sub-headings">Trustees</h3>
+        <div class="flex">
+          <div class="child" *ngFor="let trust of trustees">
+            <div>
+              <div class="trustee-image">
+                <img [src]="'../../../assets/' + trust.img + '.png' " [alt]="trust.name">
+              </div>
+              <div class="exec-details">
+                <p><span>{{trust.title}} </span><span>{{trust.name}}</span></p>
+                <p class="cent">{{trust.position}}</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="sub-headings">Projects</h3>
+        <p>The union has been involved in major community projects to uplift the lives of our people back home.</p>
+        <a routerLink="/projects" routerLinkActive="active" mat-raised-button class="follow_btn"> Latest projects</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="excos elders col-md-10">
+    <div class="row">
+      <div class="col-md-8 ">
+        <h3 class="sub-headings">Elders' Forum</h3>
+        <div class="flex">
+          <div class="child" *ngFor="let trust of eldersForum">
+            <div>
+              <div class="trustee-image">
+                <img [src]="'../../../assets/elders/' + trust.img + '.png' " [alt]="trust.name">
+              </div>
+              <div class="exec-details">
+                <p><span>{{trust.title}} </span><span>{{trust.name}}</span></p>
+                <p class="cent">{{trust.position}}</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="sub-headings">Affliation</h3>
+          <p>The union is proudly working with the following organisations</p>
+         <ul>
+           <li><a href="http://www.remogdf.org.ng" target="_blank">Remo Growth and Development Forum (RemoGDF)</a></li>
+         </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>

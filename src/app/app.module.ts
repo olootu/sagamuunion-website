@@ -1,18 +1,34 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+//import {StoreModule} from '@ngrx/store';
+
 import { AppComponent } from './app.component';
+import { YouthMoreComponent } from './components/dialogs/youth-more/youth-more.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    YouthMoreComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule,
+    CoreModule,
+    BrowserAnimationsModule,
+    // StoreModule.forRoot({})
   ],
-  providers: [],
+  entryComponents: [YouthMoreComponent],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
+  ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

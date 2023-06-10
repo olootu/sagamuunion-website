@@ -1,0 +1,31 @@
+
+:host  .mat-card {
+  max-height: 500px;
+  overflow: scroll;
+  margin-bottom: 3em;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.project{
+  margin: 1em;
+  .mat-card-image{
+    max-width: 100%;
+    max-height: 250px;
+  }
+
+  .cent {
+    margin-bottom: 1.5rem;
+  }
+
+  .side-img {
+    img {
+      max-width: 50%;
+    }
+  }
+  
+  
+}
+

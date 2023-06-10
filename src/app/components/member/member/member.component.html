@@ -1,0 +1,229 @@
+<div class="row">
+  <div class="col-md-12 member-title">
+    <h1>Members</h1>
+  </div>
+    <!-- <div class="col-md-6 ">
+
+       <div class="row">
+         <div class="col-md-6"> -->
+           <!-- <h2>Sign-in</h2>
+           <form class="example-form" (submit)="signIn(memberSigninForm)" #memberSigninForm="ngForm" >
+              <div>
+                  <mat-form-field class="example-full-width">
+                    <input ngModel matInput placeholder="Username" type="text" name="username" >
+                  </mat-form-field>
+                </div>
+
+                <div>
+                  <mat-form-field class="example-full-width">
+                    <input ngModel matInput placeholder="Password" type="password" name="password" >
+                  </mat-form-field>
+                </div>
+
+
+                <div>
+
+                    <button type="submit"  color="accent" mat-raised-button >Signin</button>
+
+
+                </div>
+          </form> -->
+         <!-- </div> -->
+
+         <!-- Register -->
+         <!-- <div class="col-md-6"> -->
+           <!-- <h2>Register</h2>
+           <p class="mem-text">Membership is opened to all indigines of Sagamu living in the Great Britain.</p> -->
+
+           <!-- <form [formGroup]="rForm" class="example-form" (submit)="addMember()" >
+            <div>
+                <mat-form-field class="example-full-width">
+                  <input formControlName="name" matInput placeholder="Name" type="text" name="name" >
+                </mat-form-field>
+              </div>
+
+              <div>
+                <mat-form-field class="example-full-width">
+                  <input formControlName="email"  matInput placeholder="Email" type="text" name="email" >
+                </mat-form-field>
+              </div>
+
+              <div>
+                <mat-form-field class="example-full-width">
+                  <input formControlName="telephone" matInput placeholder="telephone" type="text" name="telephone" >
+                </mat-form-field>
+              </div>
+
+              <div>
+                <button (click)="fileUpload.click()" type="button"   mat-raised-button >Upload Image</button>
+                  <input #fileUpload   (change)="onImagePicked($event)" type="file" >
+
+              </div>
+              <div class="img-preview" *ngIf="imagePreview !=='' && imagePreview">
+                <img [src]="imagePreview" [alt]="name">
+              </div>
+
+
+              <div>
+
+                  <button type="submit"  color="primary" mat-raised-button >Apply</button>
+
+
+              </div>
+        </form> -->
+
+
+           <!-- <form class="example-form" (submit)="addMember(memberPostForm)" #memberPostForm="ngForm" >
+                <div>
+                    <mat-form-field class="example-full-width">
+                      <input ngModel matInput placeholder="Name" type="text" name="name" >
+                    </mat-form-field>
+                  </div>
+
+                  <div>
+                    <mat-form-field class="example-full-width">
+                      <input ngModel matInput placeholder="Email" type="text" name="email" >
+                    </mat-form-field>
+                  </div>
+
+                  <div>
+                    <mat-form-field class="example-full-width">
+                      <input ngModel matInput placeholder="telephone" type="text" name="telephone" >
+                    </mat-form-field>
+                  </div>
+
+
+                  <div>
+
+                      <button type="submit"  color="primary" mat-raised-button >Apply</button>
+
+
+                  </div>
+            </form> -->
+
+        <!-- </div>
+       </div>
+      </div> -->
+
+      <div class="col-md-6 ">
+         <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header class="header">
+                <mat-panel-title class="title">
+           <mat-icon>list</mat-icon>  Members List
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div class="search-field">
+                 <form #memberSearch="ngForm">
+                    <mat-form-field class="mat-select">
+                        <mat-icon class="mat-prefix" matPrefix>search</mat-icon>
+                        <input name="search" matInput ngModel matInput value=""
+                          placeholder="Search for member by name">
+                          <button *ngIf="memberSearch.value.search" mat-button matSuffix mat-icon-button aria-label="Clear"
+                          (click)="memberSearch.reset()">
+                          <mat-icon class="search-close-btn">close</mat-icon>
+                        </button>
+
+                      </mat-form-field>
+                 </form>
+
+                </div>
+                <div *ngIf="showEditForm">
+                  <form [formGroup]="rForm" class="example-form" (submit)="addMember()" >
+                    <div>
+                        <mat-form-field class="example-full-width">
+                          <input formControlName="name" matInput placeholder="Name" type="text" name="name" >
+                        </mat-form-field>
+                      </div>
+
+                      <div>
+                        <mat-form-field class="example-full-width">
+                          <input formControlName="email"  matInput placeholder="Email" type="text" name="email" >
+                        </mat-form-field>
+                      </div>
+
+                      <div>
+                        <mat-form-field class="example-full-width">
+                          <input formControlName="password"  matInput placeholder="Password" type="password" name="password" >
+                        </mat-form-field>
+                      </div>
+
+                      <div>
+                        <mat-form-field class="example-full-width">
+                          <input formControlName="telephone" matInput placeholder="telephone" type="text" name="telephone" >
+                        </mat-form-field>
+                      </div>
+
+                      <div>
+                        <button (click)="fileUpload.click()" type="button"   mat-raised-button >Upload Image</button>
+                          <input #fileUpload   (change)="onImagePicked($event)" type="file" >
+
+                      </div>
+                      <div class="img-preview" *ngIf="imagePreview !=='' && imagePreview">
+                        <img [src]="imagePreview" [alt]="name">
+                      </div>
+
+
+                      <div>
+
+                          <button type="submit"  color="primary" mat-raised-button >Apply Edit</button>
+
+
+                      </div>
+                </form>
+                </div>
+              <div class="flex">
+                <div class=" row child" *ngFor="let member of membersList | search:'name,type': memberSearch.value.search;" >
+                    <div class="row">
+
+                     <div class="col-md-4 mem-image">
+                        <img matListAvatar [src]="member.imagePath? member.imagePath : defaultImgUrl" alt="...">
+
+                     </div>
+                     <div class="col-md-8">
+                        <h5> {{member.name}} </h5>
+
+                     </div>
+                    </div>
+
+                      <div class="col-md-12">
+                          <p >
+                             {{member.email}}
+
+                            </p>
+
+                      </div>
+                      <div class="col-md-12">
+                          <p >
+                              {{member.telephone}}
+                            </p>
+                      </div>
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" (click)="onDelete(member.id)"  color="warn" mat-raised-button >Delete</button>
+
+
+                        </div>
+                        <div class="col">
+                            <a type="button" (click)="onEdit(member.id)" [routerLink]="['/edit', member.id]"   color="primary" mat-raised-button >Edit</a>
+
+
+                        </div>
+                    </div>
+                </div>
+
+              </div>
+            </mat-expansion-panel>
+
+          </mat-accordion>
+          <mat-paginator
+          [length]="totalPost" pageSize="noOfPostPerPage"
+           [pageSizeOptions]="pageSizeOptions"
+           (page)="onPagination($event)"
+          ></mat-paginator>
+        </div>
+</div>
+
+
+
+
