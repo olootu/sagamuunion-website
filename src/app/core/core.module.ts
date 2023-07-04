@@ -1,5 +1,4 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 // import { MembersService } from './members.service';
 import { EcwidLoaderService } from './ecwid-loader.service';
@@ -9,7 +8,6 @@ import { AuthInterceptor } from './auth-interceptor';
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
     HttpClientModule
   ],
   providers: [

@@ -2,31 +2,35 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-import { SharedModule } from './shared/shared.module';
-import { CoreModule } from './core/core.module';
+
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 //import {StoreModule} from '@ngrx/store';
 
 import { AppComponent } from './app.component';
-import { YouthMoreComponent } from './components/dialogs/youth-more/youth-more.component';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
+import { SearchPipe } from './shared/pipes/search.pipe';
+import { SortbyPipe } from './shared/pipes/sortby.pipe';
+//import { YouthMoreComponent } from './components/dialogs/youth-more/youth-more.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    YouthMoreComponent
+    // //  YouthMoreComponent
+    // SortbyPipe, SearchPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule,
-    CoreModule,
     BrowserAnimationsModule,
+    CoreModule,
     // StoreModule.forRoot({})
+    SharedModule
   ],
-  entryComponents: [YouthMoreComponent],
   providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy }
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    // [SortbyPipe, SearchPipe],
   ],
 
   bootstrap: [AppComponent]

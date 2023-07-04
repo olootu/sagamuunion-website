@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngMaterialModule } from '../angMaterial/angMaterial.module';
 import { NgProgressModule } from 'ngx-progressbar';
@@ -8,25 +7,39 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { SearchPipe } from './pipes/search.pipe';
 import { SortbyPipe } from './pipes/sortby.pipe';
 import { LoadingComponent } from './loading/loading.component';
-import { MemberModule } from '../components/member/member.module';
+import { RouterModule } from '@angular/router';
+import { NavigationComponent } from './navigation/navigation.component';
+import { CarouselComponent } from './carousel/carousel.component';
+//import { MemberModule } from '../components/member/member.module';
 
 
 @NgModule({
-  declarations: [ToolbarComponent, SearchPipe, SortbyPipe, LoadingComponent],
+  declarations: [ToolbarComponent, LoadingComponent,
+    SortbyPipe, SearchPipe, NavigationComponent, CarouselComponent],
   imports: [
-
     CommonModule,
     AngMaterialModule,
-    RouterModule,
     NgProgressModule,
-    MemberModule
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule
+
+    // MemberModule
   ],
   exports: [
-    AngMaterialModule, FormsModule, ReactiveFormsModule,
+    AngMaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
-    ToolbarComponent, SearchPipe, SortbyPipe,
+    ToolbarComponent,
     LoadingComponent,
-    NgProgressModule
-  ]
+    NgProgressModule,
+    SortbyPipe,
+    SearchPipe,
+    NavigationComponent,
+    CarouselComponent
+  ],
+  providers: [[SortbyPipe, SearchPipe],],
+
 })
 export class SharedModule { }

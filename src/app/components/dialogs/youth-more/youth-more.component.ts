@@ -6,11 +6,8 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   templateUrl: './youth-more.component.html',
   styleUrls: ['./youth-more.component.scss']
 })
-export class YouthMoreComponent implements OnInit {
+export class YouthMoreComponent {
 
   constructor(@Inject(MAT_DIALOG_DATA) public youth: any) { }
-
-  ngOnInit() {
-  }
 
 }

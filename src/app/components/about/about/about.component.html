@@ -1,18 +1,17 @@
 <div class="row">
   <div class="col-md-12">
     <h1 class="cent">The Organisation</h1>
-
   </div>
   <div class="excos col-md-10">
     <h3>Current Exco</h3>
-    <div fxLayout="row" fxLayout.lt-sm="row wrap" class="fle">
+    <div class="d-flex justify-content-between flex-wrap" fxLayout="row" fxLayout.lt-sm="row wrap">
       <div fxFlex.lt-sm="120px" class="child" *ngFor="let exec of executives">
         <div>
           <div class="exec" [ngClass]="{
           'exec-image-small': xBreakPoint,
           'exec-image': !xBreakPoint
         }">
-            <img [src]="'../../../assets/' + exec.img + '.png'" [alt]="exec.name">
+            <img alt="{{exec.name}}" [src]="'../../../assets/exco/' + exec.img + '.png'">
           </div>
           <div class="exec-details">
             <p><span>{{exec.title}} </span><span>{{exec.name}}</span></p>
@@ -25,8 +24,121 @@
   </div>
 
 
-  <div class="excos col-md-10">
-    <div class="row">
+  <!-- Our Story -->
+  <div _ngcontent-c3="" class="excos col-md-10">
+    <div _ngcontent-c3="" class="row">
+      <div _ngcontent-c3="" class="col-md-8">
+        <h3 _ngcontent-c3="" class="sub-headings">The Union</h3>
+        <section _ngcontent-c3="">
+          <p _ngcontent-c3=""> Sagamu Union is a congregation of Sagamu sons and daughters living in Great Britain,
+            formed to project good image of Sagamu and promote its interest and that of all her descendants both home
+            and abroad, in all aspects of life at all levels. </p>
+        </section>
+        <section _ngcontent-c3="">
+          <p _ngcontent-c3=""> Though the Union was first launched in 1961, it was revived on January 30th, 2000, with
+            its first meeting sponsored by Alhaji Bashir Dauda (Agbegilere) and was re-launched on October 5th, 2002.
+            <br _ngcontent-c3="">
+          </p>
+          <h6 _ngcontent-c3="">List of Attendees of the Inaugural Meeting of January 30th, 2000:</h6>
+          <ol _ngcontent-c3="">
+            <li _ngcontent-c3="">Aremooba Musakallam K Balogun</li>
+            <li _ngcontent-c3="">Chief Ola Ogunyemi</li>
+            <li _ngcontent-c3="">Omooba Olufemi Saibu (Late)</li>
+            <li _ngcontent-c3="">Alhaji Bashir Dauda Agbegilere</li>
+            <li _ngcontent-c3="">Alhaji Femi Adekunle</li>
+            <li _ngcontent-c3="">Alhaja Rashidat Makonjuola</li>
+          </ol>
+        </section>
+        <section _ngcontent-c3="">
+          <h6 _ngcontent-c3="">Union Presidents ( from 2000 - date)</h6>
+          <ul _ngcontent-c3="">
+            <li _ngcontent-c3=""><span _ngcontent-c3="" class="text-muted">2002 – 2006</span><br _ngcontent-c3="">
+              President- Chief Akogun David Ayodele Sokoya (Late)<br _ngcontent-c3=""> General Secretary – Aremooba
+              Musakallam K O’Balogun </li>
+            <li _ngcontent-c3=""><span _ngcontent-c3="" class="text-muted">2006 - 2008</span><br _ngcontent-c3="">
+              President- Aremooba Musakallam K O’Balogun) <br _ngcontent-c3=""> General Secretary- Barrister Obatunde
+              Awoyemi/Chief Ola Ogunyemi </li>
+            <li _ngcontent-c3=""><span _ngcontent-c3="" class="text-muted">2008 - 2010</span><br _ngcontent-c3="">
+              President- Aremooba Musakallam K O’Balogun <br _ngcontent-c3=""> General Secretary - Chief Ola Ogunyemi
+            </li>
+            <li _ngcontent-c3=""><span _ngcontent-c3="" class="text-muted">2010 – 2018</span><br _ngcontent-c3="">
+              President- Chief (Dr.) Lai Soile <br _ngcontent-c3=""> General Secretary - Chief Ola Ogunyemi </li>
+            <li _ngcontent-c3=""><span _ngcontent-c3="" class="text-muted">2018 - </span><br _ngcontent-c3="">
+              President- Chief Ola Ogunyemi <br _ngcontent-c3=""> General Secretary - Barrister Kamorudeen Adesoji Soda
+            </li>
+          </ul>
+          <hr _ngcontent-c3="">
+        </section>
+        <section _ngcontent-c3="">
+          <h6 _ngcontent-c3="">Past Presidents ( up to the late 70s)</h6>
+          <ul _ngcontent-c3="">
+            <li _ngcontent-c3=""><span _ngcontent-c3="" class="text-muted">1961 - 1964</span><br _ngcontent-c3="">
+              President: Mr Samuel Ilori<br _ngcontent-c3=""> Secretary: Prince Olapeju Adedoyin </li>
+            <li _ngcontent-c3=""><span _ngcontent-c3="" class="text-muted">1964 - 1966</span><br _ngcontent-c3="">
+              President: Prince Olapeju Adedoyin<br _ngcontent-c3=""> Secretary: Prince Kayode Akinsanya </li>
+            <li _ngcontent-c3=""><span _ngcontent-c3="" class="text-muted">1966 - 1972</span><br _ngcontent-c3="">
+              President: Prince Moses Sokoya<br _ngcontent-c3=""> Secretary: Mr E. O. Alli </li>
+            <li _ngcontent-c3=""><span _ngcontent-c3="" class="text-muted">1972 - 1974</span><br _ngcontent-c3="">
+              President: Mr Nathaniel Sofekun<br _ngcontent-c3=""> Secretary: Chief Adewale Alimi </li>
+            <li _ngcontent-c3=""><span _ngcontent-c3="" class="text-muted">1974 - 1975</span><br _ngcontent-c3="">
+              President: Mr. Noah Afolabi Solarin<br _ngcontent-c3=""> Secretary: Chief Adewale Alimi </li>
+            <li _ngcontent-c3=""><span _ngcontent-c3="" class="text-muted">1975 - 1976</span><br _ngcontent-c3="">
+              President: Mr Lasisi Idowu<br _ngcontent-c3=""> Secretary: Chief Adewale Alimi </li>
+            <li _ngcontent-c3=""><span _ngcontent-c3="" class="text-muted">1976 - 1978</span><br _ngcontent-c3="">
+              President: Mr Lasisi Idowu<br _ngcontent-c3=""> Secretary: Oba Oyesola Akinsanya, Ewusi of Makun </li>
+            <li _ngcontent-c3=""><span _ngcontent-c3="" class="text-muted">1978 - 1980</span><br _ngcontent-c3="">
+              President: Engr. Samson Olatoye Tikare<br _ngcontent-c3=""> Secretary: Otunba Hamed Onikoyi </li>
+          </ul>
+          <div _ngcontent-c3="">
+            <h6 _ngcontent-c3=""> Notable Members In the 1960s/70s</h6> Alhaja S. Ogunkoya, Mr. Gabriel Sobande, Mrs
+            Sola Awoyemi, Mr Yinka Odulate, Lawyer Olu Adenowo, Lawyer Ganiu Ajayi, Chief Leasu Awosanya, Chief Lomu
+            Ashaye, Mrs Kudirat Banwo, Mr Kehinde Saibu.<br _ngcontent-c3=""><strong _ngcontent-c3="">Others
+              include</strong><br _ngcontent-c3=""> Mr. Alagbala Kehinde, Mr. Moshood Ishola Abijo, Mr. Busura Lawal,
+            Mr. Eddy Kehinde, Mr. Taye Lawal and Mr Samson Adebayo Somotun.
+          </div>
+          <p _ngcontent-c3="" class="text-muted float-right">last reviewed in 2022.</p>
+          <hr _ngcontent-c3="">
+        </section>
+        <section _ngcontent-c3="">
+          <div _ngcontent-c3="">
+            <p _ngcontent-c3=""><strong _ngcontent-c3="">Monthly Meetings</strong></p>
+          </div>
+          <p _ngcontent-c3=""> Our meetings are held on every 3rd Saturday of the month.</p>
+          <p _ngcontent-c3=""><strong _ngcontent-c3="">Who can join?</strong></p>
+          <p _ngcontent-c3=""><a rel="noopener" _ngcontent-c3="" class="follow_btn"
+              href="http://www.sagamuunion.org/members" target="_blank">Membership</a> is open to all Sagamu indigenes
+            throughout the UK. </p>
+        </section>
+      </div>
+      <div _ngcontent-c3="" class="col-md-4">
+        <h3 _ngcontent-c3="" class="sub-headings">Reach us</h3>
+        <div _ngcontent-c3="" class="constitution">
+          <p _ngcontent-c3=""><mat-icon _ngcontent-c3="" class="mat-icon notranslate material-icons mat-icon-no-color"
+              role="img" aria-hidden="true">home</mat-icon><span _ngcontent-c3="" class="addr">562 Heathway, Dagenham,
+              RM10 7RU</span></p>
+          <p _ngcontent-c3=""><mat-icon _ngcontent-c3="" class="mat-icon notranslate material-icons mat-icon-no-color"
+              role="img" aria-hidden="true">email</mat-icon><span _ngcontent-c3=""
+              class="addr">secretariat@sagamuunion.org</span></p>
+          <p _ngcontent-c3=""><mat-icon _ngcontent-c3="" class="mat-icon notranslate material-icons mat-icon-no-color"
+              role="img" aria-hidden="true">phone</mat-icon><span _ngcontent-c3="" class="addr">07960 276681,
+              07931122554 </span></p>
+          <div _ngcontent-c3="" class="constitution"><a rel="noopener" _ngcontent-c3=""
+              href="https://sagamuunion.org/members/wp-content/uploads/2022/08/Sagamu-constitution-2022.pdf"
+              target="_blank"><mat-icon _ngcontent-c3=""
+                class="const-icon mat-icon notranslate material-icons mat-icon-no-color" role="img"
+                aria-hidden="true">cloud_download</mat-icon><button _ngcontent-c3=""
+                class="mat-but mat-raised-button mat-primary" color="primary" mat-raised-button=""><span
+                  class="mat-button-wrapper">Download our constitution</span>
+                <div class="mat-button-ripple mat-ripple" matripple=""></div>
+                <div class="mat-button-focus-overlay"></div>
+              </button></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="excos col-md-10">
+    <div class="row flex">
       <div class="col-md-8">
         <h3 class="sub-headings">Our story</h3>
         <div>
@@ -43,10 +155,10 @@
 
               Our meetings are held on every 3rd Saturday of the month.</p>
 
-             <p><strong>Who can join?</strong></p>
-              <a href="http://www.sagamuunion.org/members" target="_blank" class="follow_btn">Membership</a>
-              is open to all Sagamu indigenes throughout the UK and Ireland.
-         
+            <p><strong>Who can join?</strong></p>
+            <a href="http://www.sagamuunion.org/members" target="_blank" class="follow_btn">Membership</a>
+            is open to all Sagamu indigenes throughout the UK and Ireland.
+
 
           </div>
         </div>
@@ -77,17 +189,17 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="excos trustee col-md-10">
-    <div class="row">
+    <div class="row flex">
       <div class="col-md-8 ">
         <h3 class="sub-headings">Trustees</h3>
-        <div class="flex">
+        <div class="flex d-flex justify-content-between flex-wrap">
           <div class="child" *ngFor="let trust of trustees">
             <div>
               <div class="trustee-image">
-                <img [src]="'../../../assets/' + trust.img + '.png' " [alt]="trust.name">
+                <img [src]="'../../../assets/' + trust.img + '.png' " alt="{{trust.name}}">
               </div>
               <div class="exec-details">
                 <p><span>{{trust.title}} </span><span>{{trust.name}}</span></p>
@@ -109,14 +221,14 @@
 
 
   <div class="excos elders col-md-10">
-    <div class="row">
+    <div class="row flex">
       <div class="col-md-8 ">
         <h3 class="sub-headings">Elders' Forum</h3>
-        <div class="flex">
+        <div class="flex d-flex justify-content-between flex-wrap">
           <div class="child" *ngFor="let trust of eldersForum">
             <div>
               <div class="trustee-image">
-                <img [src]="'../../../assets/elders/' + trust.img + '.png' " [alt]="trust.name">
+                <img [src]="'../../../assets/elders/' + trust.img + '.png' " alt="{{trust.name}}">
               </div>
               <div class="exec-details">
                 <p><span>{{trust.title}} </span><span>{{trust.name}}</span></p>
@@ -130,12 +242,13 @@
 
       <div class="col-md-4">
         <h3 class="sub-headings">Affliation</h3>
-          <p>The union is proudly working with the following organisations</p>
-         <ul>
-           <li><a href="http://www.remogdf.org.ng" target="_blank">Remo Growth and Development Forum (RemoGDF)</a></li>
-         </ul>
-        </div>
+        <p>The union is proudly working with the following organisations</p>
+        <ul>
+          <li><a rel="noopener" href="http://www.remogdf.org.ng" target="_blank">Remo Growth and Development Forum
+              (RemoGDF)</a></li>
+        </ul>
       </div>
     </div>
-
   </div>
+
+</div>

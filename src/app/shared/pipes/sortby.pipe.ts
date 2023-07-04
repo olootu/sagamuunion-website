@@ -7,7 +7,7 @@ import * as _ from 'lodash';
 })
 export class SortbyPipe implements PipeTransform {
 
-  transform(array: Array<{}>, args: string[]): Array<string> | Array<{}> {
+  transform(array: Array<{}>, args: string[]): Array<string> | Array<any> {
 
     array = array || [];
 
@@ -24,12 +24,12 @@ export class SortbyPipe implements PipeTransform {
     return _.orderBy(array, (item: any) => item[key]);
   }
 
-  // transform(value: any[], order = '', column: string = ''): any[] {
+  // transform(value: any[], order: any = '', column: any = ''): any[] {
   //   if (!value || order === '' || !order) { return value; } // no array
   //   if (value.length <= 1) { return value; } // array with only one item
-  //   if (!column || column === '') { 
-  //     if(order==='asc'){return value.sort()}
-  //     else{return value.sort().reverse();}
+  //   if (!column || column === '') {
+  //     if (order === 'asc') { return value.sort() }
+  //     else { return value.sort().reverse(); }
   //   } // sort 1d array
   //   return orderBy(value, [column], [order]);
   // }

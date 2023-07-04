@@ -14,7 +14,7 @@ export class BlogComponent implements OnInit {
   content: Wordpress[] = [];
   isMobilePhone: boolean;
   isMobileLandscape: boolean;
-  selected = 'DESC';
+  selected = 'asc';
   length = 100;
   pageSize = 2;
   pageSizeOptions: number[] = [2, 5];

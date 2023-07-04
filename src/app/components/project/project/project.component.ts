@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../project.service';
-import {Wordpress} from '../../../models/wordpress.model';
+import { Wordpress } from '../../../models/wordpress.model';
 
 @Component({
   selector: 'app-project',
@@ -8,16 +8,16 @@ import {Wordpress} from '../../../models/wordpress.model';
   styleUrls: ['./project.component.scss']
 })
 export class ProjectComponent implements OnInit {
-  
-  projects:Wordpress[] = [];
-  constructor(private http:ProjectService) { }
+
+  projects: Wordpress[] = [];
+  constructor(private http: ProjectService) { }
 
   ngOnInit() {
     this.http.getProjects()
-    .subscribe( (data:Wordpress[]) => {
-      console.log(data);
-      this.projects = data;
-    })
+      .subscribe((data) => {
+        console.log(data);
+        this.projects = data;
+      })
   }
 
 }

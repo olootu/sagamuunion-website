@@ -14,6 +14,6 @@ const routes: Routes = [
   exports: [
     RouterModule
   ],
-  providers: [ ProjectService ]
+  // providers: [ ProjectService ]
 })
 export class ProjectRoutingModule { }

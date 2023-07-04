@@ -1,0 +1,33 @@
+:host::ng-deep{
+
+
+    mat-carousel {
+      height: 450px !important;
+      margin-bottom: 25px;
+      background: #222;
+      display: block;
+       > div[style]{
+        height: 450px !important;
+        .carousel-slide {
+          height: 450px !important;
+          background-size: contain;
+        }
+        }
+    }
+    }
+
+    .carousel-item-description {
+      position: absolute;
+      color: aliceblue;
+      font-size: 18px;
+      top: 1px;
+      width: 100%;
+      left: 10px;
+      background: #222;
+    }
+
+    @media only screen and (min-width: 768px) {
+      .carousel-item-description {
+        left: 100px;
+      }
+    }

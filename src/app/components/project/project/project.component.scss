@@ -13,19 +13,49 @@
   margin: 1em;
   .mat-card-image{
     max-width: 100%;
-    max-height: 250px;
+    display: block;
+   // max-height: 250px;
   }
 
   .cent {
     margin-bottom: 1.5rem;
   }
 
-  .side-img {
-    img {
-      max-width: 50%;
-    }
-  }
+  // {
+  //   img {
+  //     max-width: 50%;
+  //   }
+  // }
   
   
 }
+
+:host::ng-deep{
+
+
+  mat-carousel {
+    height: 550px !important;
+    margin-bottom: 25px;
+    background: #222;
+    display: block;
+     > div[style]{
+      height: 550px !important;
+      .carousel-slide {
+        height: 550px !important;
+        background-size: contain;
+        
+      }
+      }
+  }
+  }
+
+  .carousel-item-description {
+    position: absolute;
+    color: aliceblue;
+    font-size: 18px;
+    top: 1px;
+    width: 100%;
+    text-align: center;
+    background: #222;
+  }
 

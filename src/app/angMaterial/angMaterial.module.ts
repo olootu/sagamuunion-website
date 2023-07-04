@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-//import { MatCarouselModule } from '@ngmodule/material-carousel';
+//import { MatCarouselModule } from '@angular/material/';
+import { MatCarouselModule } from '@thouet/material-carousel';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
@@ -21,7 +22,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { PageEvent } from '@angular/material/paginator';
+// import { PageEvent } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [],
@@ -45,11 +46,12 @@ import { PageEvent } from '@angular/material/paginator';
     MatSelectModule,
     MatToolbarModule,
     MatMenuModule,
-    // MatCarouselModule,
+    MatCarouselModule,
     MatExpansionModule,
     MatPaginatorModule,
-    PageEvent
-  ],
+    // PageEvent
+  ]
+  ,
   exports: [MatButtonModule,
     MatCheckboxModule,
     MatInputModule,
@@ -69,10 +71,9 @@ import { PageEvent } from '@angular/material/paginator';
     MatSelectModule,
     MatToolbarModule,
     MatMenuModule,
-    // MatCarouselModule,
+    MatCarouselModule,
     MatExpansionModule,
-    MatPaginatorModule,
-    PageEvent
+    MatPaginatorModule
   ],
 })
 export class AngMaterialModule { }

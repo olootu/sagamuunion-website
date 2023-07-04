@@ -1,0 +1,62 @@
+.desktop-nav {
+    display: none;
+}
+
+ul {
+    background: #444;
+    list-style: none;
+    min-width: 380px;
+    display: block;
+    color: white;
+    background: #444;
+    list-style: none;
+    li {
+        text-transform: uppercase;
+    }
+    a:visited{
+        color: white
+    }
+}
+a.active{
+    display: block;
+    border-bottom: 1px solid #fff;
+    a, a:visited {
+        color: #222;
+    }
+  }
+
+
+
+@media only screen and (min-width: 768px) {
+  
+    ul {
+        background: transparent;
+        color: #444;
+        list-style: none;
+        display: flex;
+        width: 70vw;
+        justify-content:flex-start;
+        gap: 20px;
+        li {
+            text-transform: uppercase;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:visited{
+            color: #666;
+        }
+        a.active{
+            text-decoration: underline;
+            background: none;
+          }
+    }
+    .mobile-nav {
+      position: absolute;
+        z-index: 200;
+        right: 16px;
+        top: 60px;
+    }
+
+    
+}

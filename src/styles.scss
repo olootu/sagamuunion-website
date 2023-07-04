@@ -1,4 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+// /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "./variable";
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body{
+    overflow-x: hidden;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+a, a:visited {
+    color: mediumvioletred;
+}
+
+.cent {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.content{
+    .wp-block-video{
+        video {
+            width: 100%;
+            max-height: 240px;
+        }
+    }
+
+    .wp-block-image{
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.project{
+
+    .mat-card {
+        border: 1px solid #f5f5f5;
+        img {
+            width: 100%;
+        }
+    }
+  
+    .side-img {
+      img {
+       // max-width: 50%;
+        //clear: both;
+      }
+      &.left {
+        img {
+           // float: left;
+            clear: both;
+            padding-top: 25px;
+            padding-right: 10px;
+        }
+    }
+
+      &.right {
+          img {
+            //  float: right;
+              clear: both;
+             padding-top: 25px;
+              padding-left: 10px;
+          }
+      }
+
+      .wp-block-media-text__content {
+        
+         p {
+            padding-top: 25px;
+         }
+      }
+      .wp-block-media-text__media {
+          clear: both;
+      }
+    }
+}

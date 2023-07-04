@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Member, Post } from '../../../models/members.model';
 //import { MembersService } from '../../../core/members.service';
 import { Subscription } from 'rxjs';
@@ -11,7 +11,7 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
   templateUrl: './member.component.html',
   styleUrls: ['./member.component.scss']
 })
-export class MemberComponent implements OnInit {
+export class MemberComponent implements OnInit, OnDestroy {
 
   member: Member = new Member('', '', null, null, '', null);
   membersList: Member[];

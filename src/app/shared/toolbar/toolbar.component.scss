@@ -6,6 +6,20 @@
     flex: 1;
    // width: 25%;
   }
+  .navbar {
+    justify-content: initial !important;
+    margin-bottom: 20px;
+    button {
+      &.navbar-toggler{
+        &:focus {
+          box-shadow:none !important
+        }
+      }
+    }
+  }
+
+  
+  
   .logo{
    
     position: relative;
@@ -102,8 +116,26 @@ a {
   font-weight: 500;
 }
 
+.colorNavButton {
+  border: 1px solid #FF4081;
+}
+
 @media only screen and (min-device-width: 480px){
-  .mat-icon{
-    display: none;
+  // .mat-icon{
+  //   display: none;
+  // }
+  // .navbar {
+  //   border: 1px solid green;
+    
+  //  }
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar-toggler {
+    position: absolute !important;
+    right: 10px;
+    &:focus {
+      box-shadow:none !important
+    }
   }
 }
