@@ -13,7 +13,7 @@ ul {
     li {
         text-transform: uppercase;
     }
-    a:visited{
+    a, a:visited{
         color: white
     }
 }
@@ -43,7 +43,7 @@ a.active{
         a {
             text-decoration: none;
         }
-        a:visited{
+        a, a:visited{
             color: #666;
         }
         a.active{

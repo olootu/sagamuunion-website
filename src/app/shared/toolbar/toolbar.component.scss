@@ -119,6 +119,9 @@ a {
 .colorNavButton {
   border: 1px solid #FF4081;
 }
+.menu-text {
+  display: none;
+}
 
 @media only screen and (min-device-width: 480px){
   // .mat-icon{
@@ -133,9 +136,20 @@ a {
 @media only screen and (min-width: 768px) {
   .navbar-toggler {
     position: absolute !important;
-    right: 10px;
+    right: 50px;
+    font-size: 10px;
     &:focus {
       box-shadow:none !important
     }
+  }
+
+  .menu-text {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    right: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
   }
 }
