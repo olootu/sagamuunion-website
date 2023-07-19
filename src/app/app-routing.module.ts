@@ -16,8 +16,8 @@ const routes: Routes = [
     loadChildren: () => import('../app/components/blog/blog.module').then(x => x.BlogModule)
   },
   {
-    path: 'youths',
-    loadChildren: () => import('../app/components/youth/youth.module').then(x => x.YouthModule)
+    path: 'sut',
+    loadComponent: () => import('../app/components/sut/sut.component').then(x => x.SutComponent)
   },
   {
     path: 'projects',
