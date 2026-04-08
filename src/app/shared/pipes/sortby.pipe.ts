@@ -21,7 +21,7 @@ export class SortbyPipe implements PipeTransform {
       return array;
     }
 
-    return _.orderBy(array, (item: any) => item[key]);
+    return _.orderBy(array, (item: any) => item[key], direction.toLowerCase() as 'asc' | 'desc');
   }
 
   // transform(value: any[], order: any = '', column: any = ''): any[] {

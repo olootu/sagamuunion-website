@@ -221,7 +221,7 @@
     },
     {
       "title": "Annual Summer Beach Retreat",
-      "date": "August 12th, 2023",
+      "date": "2nd Saturday of August",
       "venue": "Margate Beach",
       "address": "Margate, Kent, CT9 1XP",
       "contact": "socialoffice@sagamuunion.org",
@@ -229,13 +229,14 @@
       "memo": ""
     },
     {
-      "title": "Remo Day (UK) 2023",
-      "date": "August 25th, 2023",
-      "venue": "Epsom Downs Racecourse",
-      "address": "Grandstand Road,Epsom, KT18 5LQ",
+      "title": "Remo Day (UK)",
+      "date": "Summer",
+      "venue": "TBA",
+      "address": "",
       "contact": "socialoffice@sagamuunion.org",
       "image": "announcement",
       "memo": ""
     }
+    
   ]
 }

@@ -8,6 +8,15 @@
         width: 100%;
         margin: initial;
     }
+
+    .excerpt-text {
+        padding: 1em;
+        // background: #fff;
+        margin: 1em;
+        height: 90%;
+        color: #fff;
+        border: 1px dotted #ccc;
+    }
     
     .blog-container{
         display: flex;
@@ -21,18 +30,26 @@
         .pic-holder{
             min-width: 30%;
             max-width: 30%;
-            background: #ccc;
+            background: #444;
 
             img {
                max-width: 100%;
-               height: auto;
+            height: stretch;
             }
         }
 
         .content {
             padding: 0 2em;
             max-height: 350px;
-            overflow: scroll;
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            .event-title {
+                position: sticky;
+                top: 0;
+                z-index: 1;
+                background: #fafafa;
+            }
             .date {
                 font-size: 50%;
                 font-weight: normal;

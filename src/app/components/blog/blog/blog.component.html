@@ -16,8 +16,8 @@
     <mat-form-field>
       <mat-label>Sort By:</mat-label>
       <mat-select [(value)]="selected">
-        <mat-option value="asc">Latest posts</mat-option>
-        <mat-option value="DESC">Old posts</mat-option>
+        <mat-option value="DESC">Latest posts</mat-option>
+        <mat-option value="ASC">Old posts</mat-option>
       </mat-select>
     </mat-form-field>
   </div>
@@ -26,10 +26,11 @@
     *ngFor="let wp of content | sortBy:['modified', selected] | search:'slug,type': memberSearch.value.search;">
     <div class="blog-container">
       <div class="pic-holder" [hidden]="isMobilePhone">
-        <img src="{{wp.featured_image_url}}" alt="">
+        <!-- <img src="{{wp.featured_image_url}}" alt=""> -->
+        <p class="excerpt-text" *ngIf="!wp.featured_image_url" [innerHTML]="wp.excerpt.rendered"></p>
       </div>
       <div class="content">
-        <h2>{{wp?.title.rendered}}<span class="date"> last updated: {{wp?.modified | date}}</span></h2>
+        <h3 class="event-title">{{wp?.title.rendered}}<span class="date"> last updated: {{wp?.modified | date}}</span></h3>
         <div [innerHTML]="wp.content.rendered"></div>
       </div>
     </div>
