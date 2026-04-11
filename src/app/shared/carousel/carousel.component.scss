@@ -1,33 +1,60 @@
-:host::ng-deep{
-
-
-    mat-carousel {
+:host::ng-deep {
+  mat-carousel {
+    height: 450px !important;
+    margin-bottom: 25px;
+    background: #222;
+    display: block;
+    > div[style] {
       height: 450px !important;
-      margin-bottom: 25px;
-      background: #222;
-      display: block;
-       > div[style]{
+      .carousel-slide {
         height: 450px !important;
-        .carousel-slide {
-          height: 450px !important;
-          background-size: contain;
-        }
-        }
-    }
-    }
-
-    .carousel-item-description {
-      position: absolute;
-      color: aliceblue;
-      font-size: 18px;
-      top: 1px;
-      width: 100%;
-      left: 10px;
-      background: #222;
-    }
-
-    @media only screen and (min-width: 768px) {
-      .carousel-item-description {
-        left: 100px;
+        background-size: contain;
       }
     }
+  }
+}
+
+.carousel {
+  position: relative;
+}
+.carousel-item-description {
+  position: absolute;
+  padding: 30px;
+  top: 200px;
+  width: 100%;
+  padding-left: 29%;
+  background: #222;
+  opacity: 0.6;
+
+  .description-text {
+    color: #fff;
+    font-size: x-large;
+    text-transform: uppercase;
+    opacity: 1;
+  }
+}
+
+.mat-progress-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Media Queries
+@media only screen and (max-width: 1024px) {
+  .carousel-item-description {
+    display: block;
+  }
+}
+
+// @media only screen and (nin-width: 430px) {
+//   // Larger iPhone 14 models
+//     .carousel-item-description {
+//     color: red;
+//     .description-text {
+//         // padding-left: 40px;
+//       }
+//   }
+
+// }

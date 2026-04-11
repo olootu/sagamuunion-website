@@ -21,6 +21,14 @@
       </mat-select>
     </mat-form-field>
   </div>
+    <mat-spinner *ngIf="isLoading" diameter="50"></mat-spinner>
+  <mat-paginator
+    [length]="length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="pageSizeOptions"
+    [pageIndex]="currentPage - 1"
+    (page)="onPageChange($event)">
+  </mat-paginator>
 
   <ng-container
     *ngFor="let wp of content | sortBy:['modified', selected] | search:'slug,type': memberSearch.value.search;">
@@ -35,4 +43,12 @@
       </div>
     </div>
   </ng-container>
+ <mat-spinner *ngIf="isLoading" diameter="50"></mat-spinner>
+  <mat-paginator
+    [length]="length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="pageSizeOptions"
+    [pageIndex]="currentPage - 1"
+    (page)="onPageChange($event)">
+  </mat-paginator>
 </div>

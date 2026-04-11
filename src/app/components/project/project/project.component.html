@@ -4,7 +4,7 @@
   <div class="carousel">
     <mat-carousel [autoplay]="true" color="accent" maxWidth="20" [loop]="true" [hideArrows]="false"
       [hideIndicators]="false" [useKeyboard]="true" [useMouseWheel]="false" orientation="ltr">
-      <mat-carousel-slide *ngFor="let project of projects | sortBy:['modified', 'DESC']"
+      <mat-carousel-slide *ngFor="let project of projects | sortBy:['date', 'DESC']"
         [image]="project.featured_image_url" overlayColor="#000000" [hideOverlay]="true" slides="15">
         <h2 class="carousel-item-description">{{project?.title?.rendered}}</h2>
       </mat-carousel-slide>

@@ -26,6 +26,7 @@
         max-height: 350px;
         overflow: hidden;
         border-radius: 20px;
+        position: relative;
 
         .pic-holder{
             min-width: 30%;
@@ -58,6 +59,7 @@
                 font-weight: 500;
             }
         }
+       
     }
 
     .filter {

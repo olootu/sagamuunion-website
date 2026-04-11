@@ -12,14 +12,15 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 export class BlogComponent implements OnInit {
 
   content: Wordpress[] = [];
-  isMobilePhone: boolean;
-  isMobileLandscape: boolean;
-  selected = 'asc';
-  length = 100;
-  pageSize = 2;
-  pageSizeOptions: number[] = [2, 5];
+  isMobilePhone = false;
+  isMobileLandscape = false;
+  selected = 'DESC';
+  length = 0;
+  currentPage = 1;
+  pageSize = 10;
+  pageSizeOptions: number[] = [5, 10, 20];
+  isLoading = false;
 
-  // MatPaginator Output
   pageEvent: PageEvent;
 
   constructor(private http: BlogService, private breakpointObserver: BreakpointObserver) {
@@ -40,18 +41,29 @@ export class BlogComponent implements OnInit {
         this.isMobilePhone = false;
       }
     });
-
   }
 
   ngOnInit() {
-    this.http.getWpApi()
-      .subscribe((data: Wordpress[]) => {
-        console.log(data);
-        this.content = data;
-      })
+    this.loadPage();
   }
 
-  setPageSizeOptions(setPageSizeOptionsInput: string) {
+  loadPage(): void {
+    this.isLoading = true;
+    this.http.getWpApi(this.currentPage, this.pageSize)
+      .subscribe(response => {
+        this.content = response.body || [];
+        this.length = Number(response.headers.get('X-WP-Total')) || 0;
+        this.isLoading = false;
+      });
+  }
+
+  onPageChange(event: PageEvent): void {
+    this.pageSize = event.pageSize;
+    this.currentPage = event.pageIndex + 1;
+    this.loadPage();
+  }
+
+  setPageSizeOptions(setPageSizeOptionsInput: string): void {
     if (setPageSizeOptionsInput) {
       this.pageSizeOptions = setPageSizeOptionsInput.split(',').map(str => +str);
     }

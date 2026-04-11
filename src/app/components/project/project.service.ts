@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ProjectService {
 
+
   constructor(private http: HttpClient) { }
 
   getProjects(): Observable<Wordpress[]> {
@@ -22,6 +23,10 @@ export class ProjectService {
     const post = {};
     const url = `https://www.sagamuunion.org/members/wp-json/wp/v2/comments?post=${postID}&content=${content}&author_name=${authorName}`;
     return this.http.post(url, post);
+  }
+
+  getHomeSlides(): Observable<Wordpress[]> {
+    return this.http.get<Wordpress[]>('https://www.sagamuunion.org/members/wp-json/wp/v2/posts?categories=68&_links&_embed');
   }
 
 }
