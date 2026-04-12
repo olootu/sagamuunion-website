@@ -16,15 +16,18 @@
 
 .carousel {
   position: relative;
+  border: 2px solid green;
 }
 .carousel-item-description {
   position: absolute;
   padding: 30px;
-  top: 200px;
+  // top: 200px;
   width: 100%;
   padding-left: 29%;
   background: #222;
   opacity: 0.6;
+   top: 79%;
+  //left: 20%;
 
   .description-text {
     color: #fff;
@@ -32,6 +35,11 @@
     text-transform: uppercase;
     opacity: 1;
   }
+}
+
+.carousel-slide-content{
+  border: 3px solid blue;
+  display: none;
 }
 
 .mat-progress-spinner {
