@@ -1,10 +1,14 @@
 <div class="carousel-holder">
   <div class="carousel">
    <mat-spinner *ngIf="slides.length === 0" diameter="50"></mat-spinner>
-    <mat-carousel [autoplay]="true" color="accent" maxWidth="20" [loop]="true" [hideArrows]="false"
-      [hideIndicators]="false" [useKeyboard]="true" [useMouseWheel]="false" orientation="ltr">
-      <mat-carousel-slide *ngFor="let slide of slides | sortBy:['date', 'DESC']; let i = index"  [image]="slide.featured_image_url" overlayColor="#000000"
-        [hideOverlay]="true" slides="15">
+    <mat-carousel color="accent" maxWidth="20"
+    [hideArrows]="false" [hideIndicators]="false" [useKeyboard]="true" [useMouseWheel]="false" orientation="ltr"
+    >
+      <mat-carousel-slide *ngFor="let slide of slides | sortBy:['date', 'DESC']; let i = index" overlayColor="#000000"
+        slides="15">
+        <img *ngIf="slide._embedded?.['wp:featuredmedia']?.[0]?.source_url || slide.featured_url" 
+             [src]="slide._embedded?.['wp:featuredmedia']?.[0]?.source_url || slide.featured_url" 
+             alt="Slide image" style="width: 100%; height: 100%; object-fit: cover;">
         <div *ngIf="slide.excerpt.rendered"
          class="carousel-item-description"><span class="description-text" [innerHTML]="slide.excerpt.rendered"></span></div>
       </mat-carousel-slide>

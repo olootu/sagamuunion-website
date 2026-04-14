@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 //import { MatCarouselModule } from '@angular/material/';
-import { MatCarouselModule } from '@thouet/material-carousel';
+import { MatCarouselModule } from '@ricardopedreiro/material-carousel';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';

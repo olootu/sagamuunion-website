@@ -16,8 +16,14 @@
 
 .carousel {
   position: relative;
-  border: 2px solid green;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain !important;
+  }
 }
+
 .carousel-item-description {
   position: absolute;
   padding: 30px;
