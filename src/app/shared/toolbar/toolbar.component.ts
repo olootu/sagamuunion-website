@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { MatCarousel, MatCarouselComponent } from '@thouet/material-carousel';
+import { MatCarousel, MatCarouselComponent } from '@ricardopedreiro/material-carousel';
 
 @Component({
   selector: 'app-toolbar',

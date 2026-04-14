@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngMaterialModule } from '../angMaterial/angMaterial.module';
@@ -26,6 +26,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 
     // MemberModule
   ],
+  schemas: [NO_ERRORS_SCHEMA],
   exports: [
     AngMaterialModule,
     FormsModule,
