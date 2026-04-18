@@ -31,7 +31,7 @@
   </mat-paginator>
 
   <ng-container
-    *ngFor="let wp of content | sortBy:['modified', selected] | search:'slug,type': memberSearch.value.search;">
+    *ngFor="let wp of content | sortBy:['date', selected] | search:'slug,type': memberSearch.value.search;">
     <div class="blog-container">
       <div class="pic-holder" [hidden]="isMobilePhone">
         <!-- <img src="{{wp.featured_image_url}}" alt=""> -->
